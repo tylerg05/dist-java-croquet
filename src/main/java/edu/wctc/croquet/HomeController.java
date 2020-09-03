@@ -15,7 +15,7 @@ public class HomeController {
     private GlossaryTerm[] terms;
 
     @PostConstruct
-    private void initMenuData() {
+    private void initData() {
         ObjectMapper mapper = new ObjectMapper();
 
         try {
@@ -46,12 +46,22 @@ public class HomeController {
     @RequestMapping("/terms")
     public String showGlossaryPage(Model model) {
         model.addAttribute("pageTitle", "Golf Croquet Glossary");
+
+        /**
+         * Add the array of GlossaryTerm objects to the model
+         */
+
         return "croquet-glossary";
     }
 
     @RequestMapping("/")
     public String showHomePage(Model model) {
         model.addAttribute("pageTitle", "Pewaukee Golf Croquet Association");
+
+        /**
+         * Add the array of Strings to the model
+         */
+
         return "index";
     }
 }
