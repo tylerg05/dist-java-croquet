@@ -40,6 +40,11 @@ public class HomeController {
     @RequestMapping("/rules")
     public String showRulesPage(Model model) {
         model.addAttribute("pageTitle", "Rules of Golf Croquet");
+
+        /**
+         * Add the array of Strings to the model
+         */
+
         return "croquet-rules";
     }
 
@@ -57,10 +62,6 @@ public class HomeController {
     @RequestMapping("/")
     public String showHomePage(Model model) {
         model.addAttribute("pageTitle", "Pewaukee Golf Croquet Association");
-
-        /**
-         * Add the array of Strings to the model
-         */
 
         return "index";
     }
