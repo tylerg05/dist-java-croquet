@@ -10,7 +10,24 @@
 
     <!-- Create a table of GlossaryTerm objects here -->
 
-
+    <table>
+        <tr>
+            <th>Term</th>
+            <th>Definition</th>
+            <th>Regulation</th>
+        </tr>
+        <tr th:each="term : ${terms}">
+            <td>
+                <span th:text="${term.term}">NAME</span>
+            </td>
+            <td>
+                <span th:text="${term.definition}">DEF</span>
+            </td>
+            <td>
+                <span th:text="${term.regulation}">REG</span>
+            </td>
+        </tr>
+    </table>
 </div>
 
 </body>
